@@ -10,10 +10,10 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
-    // Well... it looks like that Kotlin does not likes
-    // post initialization (like as constructor for instance)
-    // then we have to do this "lazy" initialization which
-    // appears to be executed after the "onCreate" event
+    // Well... theres no way to initialize a field with
+    // a view before the layout inflation then we have
+    // to do this "lazy" initialization which is executed
+    // after the "onCreate" event
     private val txtMessages: TextView by lazy { findViewById(R.id.txtMessages) }
     private val imgDice: ImageView by lazy { findViewById(R.id.imgEmptyImage) }
 
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         val rollButton: Button = findViewById(R.id.btnRollButton)
 
         // You can change any property in the xml programmatically
-        rollButton.text = "Lets roll!"
+        rollButton.text = getString(R.string.letsRoll)
 
         // And even add some action to buttons!
         rollButton.setOnClickListener {
@@ -47,12 +47,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollDice() {
         // This shows a temporally message on the screen
-        Toast.makeText(this, "The dice has been rolled!", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, getString(R.string.diceRolled), Toast.LENGTH_SHORT).show()
 
         val randomValue: Int = Random.nextInt(6) + 1
 
         // You can change any property in the xml programmatically
-        this.txtMessages.text = "Rolled! $randomValue"
+        this.txtMessages.text = getString(R.string.rolled).plus(" $randomValue")
 
         // This is an alternative solution to a switch
         // IMPORTANT! Each resource is referred as an
@@ -70,8 +70,3 @@ class MainActivity : AppCompatActivity() {
         this.imgDice.setImageResource(chosenDiceSide)
     }
 }
-
-
-
-
-

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">DiceRoller</string>
     <string name="helloMessage">Roll the dice!</string>
+    <string name="letsRoll">Lets roll!</string>
+    <string name="rolled">Rolled!</string>
+    <string name="diceRolled">The dice has been rolled!</string>
 </resources>
