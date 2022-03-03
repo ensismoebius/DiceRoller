@@ -4,4 +4,6 @@
     <string name="letsRoll">Lets roll!</string>
     <string name="rolled">Rolled!</string>
     <string name="diceRolled">The dice has been rolled!</string>
+    <string name="emptyImage">An empty image</string>
+    <string name="clickToRoll">Click to roll</string>
 </resources>

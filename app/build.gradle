@@ -14,6 +14,11 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        // In order to maintain back compatibility with older devices
+        // that cannot render vector images we need this lines in order
+        // to add support for this
+        vectorDrawables.useSupportLibrary = true
+
     }
 
     buildTypes {
