@@ -11,7 +11,7 @@ import kotlin.random.Random
 class MainActivity : AppCompatActivity() {
 
     // Well... theres no way to initialize a field with
-    // a view before the layout inflation then we have
+    // a view before the layout inflation, then, we have
     // to do this "lazy" initialization which is executed
     // after the "onCreate" event
     private val txtMessages: TextView by lazy { findViewById(R.id.txtMessages) }
