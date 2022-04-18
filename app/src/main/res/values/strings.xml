@@ -6,4 +6,6 @@
     <string name="diceRolled">The dice has been rolled!</string>
     <string name="emptyImage">An empty image</string>
     <string name="clickToRoll">Click to roll</string>
+    <string name="aboutText">Andre Furlan</string>
+    <string name="aboutThisApp">About this app</string>
 </resources>

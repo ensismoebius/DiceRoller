@@ -1,5 +1,6 @@
 package org.dedira.diceroller
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -17,6 +18,13 @@ class MainActivity : AppCompatActivity() {
     private val txtMessages: TextView by lazy { findViewById(R.id.txtMessages) }
     private val imgDice: ImageView by lazy { findViewById(R.id.imgEmptyImage) }
 
+    // The about screen will be loaded using an intent
+    private lateinit var aboutDialog: Intent
+
+    // Late inits for the buttons
+    private lateinit var rollButton: Button
+    private lateinit var aboutButton: Button
+
     // There is not main function or something like that
     // What really exists its a method which have to be
     // overwrite
@@ -28,21 +36,34 @@ class MainActivity : AppCompatActivity() {
         // load our texts, images, string, etc.
         setContentView(R.layout.activity_main)
 
+        // The about screen will be loaded using an intent
+        aboutDialog = Intent(this, About::class.java)
+
         // Now we have all (or some) of our GUI defined
         // we have to do something with it, lets begin
         // by creating a variable that references the
         // button object
-
-        val rollButton: Button = findViewById(R.id.btnRollButton)
+        rollButton = findViewById(R.id.btnRollButton)
+        aboutButton = findViewById(R.id.btnAbout)
 
         // You can change any property in the xml programmatically
-        rollButton.text = getString(R.string.letsRoll)
+        // rollButton.text = getString(R.string.letsRoll)
 
         // And even add some action to buttons!
         rollButton.setOnClickListener {
             // Here we call a method
             rollDice()
         }
+
+        aboutButton.setOnClickListener {
+            // Here we call a method
+            showAbout()
+        }
+    }
+
+    private fun showAbout() {
+        aboutDialog.putExtra("nome", "Andre")
+        startActivity(aboutDialog)
     }
 
     private fun rollDice() {
