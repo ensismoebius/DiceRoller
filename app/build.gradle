@@ -7,18 +7,13 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "org.dedira.diceroller"
+        applicationId "com.example.moebiusapp"
         minSdk 21
         targetSdk 31
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        // In order to maintain back compatibility with older devices
-        // that cannot render vector images we need this lines in order
-        // to add support for this
-        vectorDrawables.useSupportLibrary = true
-
     }
 
     buildTypes {

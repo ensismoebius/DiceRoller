@@ -1,9 +1,3 @@
 <resources>
-    <string name="app_name">DiceRoller</string>
-    <string name="helloMessage">Roll the dice!</string>
-    <string name="letsRoll">Lets roll!</string>
-    <string name="rolled">Rolled!</string>
-    <string name="diceRolled">The dice has been rolled!</string>
-    <string name="emptyImage">An empty image</string>
-    <string name="clickToRoll">Click to roll</string>
+    <string name="app_name">moebiusApp</string>
 </resources>
